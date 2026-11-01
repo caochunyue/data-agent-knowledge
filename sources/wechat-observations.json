@@ -15,6 +15,21 @@
     "source_channel": "wechat_native_window"
   },
   {
+    "id": "wechat-local-ydata-external-llm-enterprise-20260701",
+    "account": "与数据同行",
+    "title": "外部商业大模型，企业到底敢不敢接？",
+    "author": "傅一平",
+    "published_date": "2026-07-01",
+    "url": null,
+    "read_status": "read_local_window_no_url",
+    "evidence": "微信单独窗口文章正文已从顶部核验到结尾；顶部元数据显示原创、作者傅一平、与数据同行、2026年7月1日；输入范围、敏感数据、审批责任和模型错误归责段落均已查看",
+    "primary_category": "数据 Agent",
+    "tags": ["外部大模型", "企业接入", "数据安全", "审批", "责任边界", "概率输出", "模型治理", "内网架构"],
+    "summary": "文章通过一份外部大模型调用申请被连续退回的案例，说明企业接入 API、云服务或专属资源后，模型会从试验工具变成持续运行、概率输出、责任不稳定的外部智能系统。常见审批只会确认数据能否出、接口能否开、系统能否上线，却没有回答模型答错、误导、越权或影响流程时责任如何稳定落到具体主体。对内网 MaxCompute/Dataphin 场景的启示是：把数据范围、敏感性判定、调用目的、模型版本、提示词/工具权限、输出校验、人工审批、日志和回退责任写入受控调用契约；先做只读、脱敏、可回放的生产化调用，再逐步扩大流程权限。",
+    "url_gap": "文章已在微信窗口阅读，但尚未从分享/复制入口取得 mp.weixin.qq.com 原文 URL；不进入全年闭合审计。",
+    "source_channel": "wechat_native_window"
+  },
+  {
     "id": "wechat-local-ydata-free-data-20261007",
     "account": "与数据同行",
     "title": "取数，干死了整个数据团队",

@@ -5,7 +5,7 @@
   "status": "partial_public_web_fallback",
   "followed_accounts_enumerated": 0,
   "accounts_inspected": 0,
-  "articles_read": 10,
+  "articles_read": 11,
   "actual_date_coverage": null,
   "observations": [
     "微信截图可见公众号入口",
@@ -27,5 +27,5 @@
     "earliest": "2025-11-05",
     "latest": "2026-10-10"
   },
-  "scope_note": "36是截图可见账号数，不保证完整关注列表；已有10篇微信窗口正文观测但未取得原文URL，不能计入全年闭合；另有6篇公开版本相关章节阅读；日期跨度不等于完整覆盖"
+  "scope_note": "36是截图可见账号数，不保证完整关注列表；已有11篇微信窗口正文观测但未取得原文URL，不能计入全年闭合；另有6篇公开版本相关章节阅读；日期跨度不等于完整覆盖"
 }
