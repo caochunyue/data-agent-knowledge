@@ -6,7 +6,7 @@
 
 ## 阅读入口
 
-1. [面向数据研发的 Agent 落地指南](docs/practice/README.md)：架构、双向建模方法、模板、工具、三个应用案例和试点清单。
+1. [面向数据研发的 Agent 落地指南](docs/practice/README.md)：架构、双向建模方法、模板、工具、三个应用案例和试点清单；[Ossie 专题区](docs/ossie/README.md)单独标识语义模型与本体映射内容。
 2. [MaxCompute＋Dataphin 离线研发实践包](docs/offline-rd/README.md)：中间层、应用层、链路优化、平台适配与价值评测。
 3. [关注账号文章发现](docs/followed-account-findings.md)、[全年采集规程](docs/collection/README.md)与[来源状态](sources/README.md)。
 4. [业界进展判断](docs/industry-report.md)与[推荐架构](docs/architecture.md)。
