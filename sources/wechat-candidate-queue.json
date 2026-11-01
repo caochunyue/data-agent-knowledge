@@ -1,0 +1,18 @@
+[
+  {
+    "account": "与数据同行",
+    "title": "AI来了，数据治理这口锅，不能再让数据团队背",
+    "published_date": "2026-06-15",
+    "status": "discovered_not_read",
+    "evidence": "微信原生历史列表可见日期、封面和标题；正文入口当前受原生点击 AXError.notImplemented 影响",
+    "relevance": "数据治理、AI责任边界、数据质量与治理流程"
+  },
+  {
+    "account": "与数据同行",
+    "title": "央国企的数科公司纷纷注销？",
+    "published_date": "2026-06-17",
+    "status": "discovered_not_read",
+    "evidence": "微信原生历史列表可见日期、封面和标题；尚未打开正文",
+    "relevance": "数据组织、数科公司、数据平台建设"
+  }
+]
