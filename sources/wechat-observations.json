@@ -1,5 +1,20 @@
 [
   {
+    "id": "wechat-local-bat-data-warehouse-layering-20261011",
+    "account": "BAT大数据架构",
+    "title": "传统四层数仓面临挑战，AI 时代数仓分层如何演进",
+    "author": "BAT大数据架构（页面显示原创）",
+    "published_date": "2026-10-11",
+    "url": null,
+    "read_status": "read_local_window_no_url",
+    "evidence": "微信文章窗口已核验标题、公众号和日期；正文顶部说明‘分层建模不会消失，但分层的目标变了’，中段图示对比传统ODS/DWD/DWS/ADS与AI时代新增能力，后段正文核验语义层、湖仓一体、向量数据、特征数据、工具调用接口及Data→AI→Action等内容，底部显示账号与互动区",
+    "primary_category": "数据研发",
+    "tags": ["数仓分层", "ODS", "DWD", "DWS", "ADS", "语义层", "湖仓一体", "向量数据", "特征数据", "工具调用", "Data Agent", "AI原生数仓"],
+    "summary": "文章的核心不是取消传统四层，而是改变分层目标：ODS/DWD/DWS/ADS仍负责接入、事实统一、公共汇总和稳定应用，但AI时代还要为语义理解、模型消费和Agent执行提供新的数据产品形态。页面图示将传统报表驱动链路扩展为AI应用层、知识层、语义层与原有应用/汇总/明细/操作层的组合；后段强调湖仓一体承接结构化与非结构化数据，语义层把物理字段映射为业务概念并附带计算逻辑、血缘和权限策略，数据平台输出不再只有报表，还包括向量数据、特征数据和工具调用接口，服务路径从Data→Human→Decision扩展为Data→AI→Action。对MaxCompute＋Dataphin的落地启示是保留离线分层作为可信底座，在其旁建立可版本化语义/指标/血缘资产和面向Agent的只读工具层；向量与特征按消费场景建设，不把所有表直接暴露给模型；任何Action仍需权限、审批、审计和结果回写。",
+    "source_channel": "wechat_native_window",
+    "url_gap": "微信页面已阅读但未取得mp.weixin.qq.com原文链接；该文章属于BAT大数据架构，不计入与数据同行统计"
+  },
+  {
     "id": "wechat-local-ydata-analysis-known-20261018",
     "account": "与数据同行",
     "title": "分析做了二十页，全是老板知道的事",
