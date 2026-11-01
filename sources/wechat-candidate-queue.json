@@ -14,5 +14,37 @@
     "status": "discovered_not_read",
     "evidence": "微信原生历史列表可见日期、封面和标题；尚未打开正文",
     "relevance": "数据组织、数科公司、数据平台建设"
+  },
+  {
+    "account": "与数据同行",
+    "title": "一张图看懂 Data Agent 全流程",
+    "published_date": null,
+    "status": "discovered_image_article_not_read",
+    "evidence": "公众号贴图页原生截图可见标题与流程图；未打开正文",
+    "relevance": "数据 Agent 全流程、需求理解、查询、SQL、结果交付"
+  },
+  {
+    "account": "与数据同行",
+    "title": "技术架构总图 2026版：应用到底跑在什么上",
+    "published_date": null,
+    "status": "discovered_image_article_not_read",
+    "evidence": "公众号贴图页原生截图可见标题与架构总图；未打开正文",
+    "relevance": "技术架构、运行底座、数据应用"
+  },
+  {
+    "account": "与数据同行",
+    "title": "应用架构总图 2026版：一图讲清能力到系统",
+    "published_date": null,
+    "status": "discovered_image_article_not_read",
+    "evidence": "公众号贴图页原生截图可见标题与应用架构图；未打开正文",
+    "relevance": "应用架构、能力分层、系统落地"
+  },
+  {
+    "account": "与数据同行",
+    "title": "业务架构 2026版：四个核心域，一套自检法",
+    "published_date": null,
+    "status": "discovered_image_article_not_read",
+    "evidence": "公众号贴图页原生截图可见标题与业务架构图；未打开正文",
+    "relevance": "业务架构、领域划分、架构自检"
   }
 ]
