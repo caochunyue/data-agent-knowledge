@@ -29,3 +29,13 @@ python3 scripts/audit_coverage.py \
 ```
 
 仓库只保存目录元数据、原创摘要、链接与必要短引文，不保存公众号全文、私人聊天、账号凭据或企业资料。
+
+## 文章导入与解析
+
+当用户从微信复制目录/正文元数据，或提供已批准的公开原文导出时，先放入工作区临时 JSON，再运行：
+
+```bash
+python3 scripts/import_articles.py incoming/articles.json sources/collection-articles.json
+```
+
+导入器会清理跟踪参数、按 URL 去重、保留窗口外记录为 `blocked`、按关键词给出候选主分类，并且**不把 `body` 字段写入仓库**。`read` 必须同时有 URL 和 `reading_evidence`；自动分类只是候选，需人工复核后再进入覆盖审计。未经实际打开的标题、搜索摘要和转载页不会被标成已读。
