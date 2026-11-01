@@ -5,6 +5,7 @@
 - [微信覆盖记录](wechat-coverage.json)：用户截图登记账号 36，首轮公开检索账号 36，公开版本相关章节阅读 6；微信原文阅读 0，实际完整日期覆盖为空。控制动作仍报错，不能声称已遍历。
 - [关注账号名单](followed-accounts.json)、[逐账号检索记录](account-search-log.json)、[公开文章](public-articles.json)与[待核验候选](candidates.json)。
 - [微信文章登记](wechat-articles.json)：当前为空，恢复采集后追加，不用官方资料填充这个列表。
+- [微信窗口观测](wechat-observations.json)：已实际打开并阅读的窗口证据；原文 URL 缺失时与正式文章账本分开保存。
 - [官方参考资料](references.json)：14 条，已阅读相关章节；不是逐字通读整站，也不代表用户关注的公众号。
 - [数据研发 Agent 落地指南参考](practice-references.json)：固定 Ossie 版本及 Dataphin、MaxCompute、SQLGlot、本体和工具接口的官方资料；证明公开能力，不证明公司版本已开放。
 - [全年采集账号账本](collection-accounts.json)与[文章账本](collection-articles.json)：按推送和卡片位置闭合目录；当前 36 个账号均未完成，未知总数保持为空而不是记为 0。
