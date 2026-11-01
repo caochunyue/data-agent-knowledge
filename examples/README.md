@@ -1,5 +1,7 @@
 # 可运行的工具 Harness 案例
 
+`examples/` 是合成运行资产层：它用于演示并验证机制，和 `docs/` 的方法说明、`evals/` 的金标、`reports/` 的运行输出协作；不包含企业数据，也不证明生产接入。
+
 从仓库根目录执行 README 中命令。基础案例 Python 3.9+，无第三方依赖。每次 Harness 从 seed.sql 建立新的内存 SQLite，不写真实数据库。
 
 | 工具 | JSON 输入 | 返回 |
