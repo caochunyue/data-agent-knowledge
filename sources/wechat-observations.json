@@ -1,24 +1,5 @@
 [
   {
-    "id": "public-ai-warehouse-layering-20260911",
-    "account": "其他公众号（名称待确认）/公开渠道核验",
-    "title": "ODS、DWD、DWS、ADS已经不够用了？AI时代的数仓该怎么分层",
-    "author": "阿里云开发者社区实名用户（页面未显示明确姓名）",
-    "published_date": "2026-09-11",
-    "url": "https://developer.aliyun.com/article/1762354",
-    "read_status": "read_public_fallback_not_wechat_window",
-    "evidence": "公开页面正文已从核心章节核验：经典四层职责、AI时代不足、语义层/知识层/上下文层/AI Serving、ADS保留及升级步骤；页面标题与用户提供标题语义一致但未获得微信原文URL，不能证明为同一推送",
-    "primary_category": "数据研发",
-    "tags": ["数仓分层", "ODS", "DWD", "DWS", "ADS", "语义层", "知识层", "上下文层", "AI Serving", "Data Agent", "权限审计", "MaxCompute", "Dataphin"],
-    "summary": "文章主张不推翻ODS-DWD-DWS-ADS，而是在其上补齐面向AI的语义、知识、上下文和AI Serving能力。ODS保证接入完整可追溯，DWD统一业务事实和主数据映射，DWS沉淀可复用分析逻辑，ADS继续服务固定报表和高频验证指标；语义层解释实体、指标、口径和规则，知识层关联制度与经验，上下文层按任务组装权限、范围、指标和工具，AI Serving把指标查询、维度分析、异常检测、归因分析封装成受控服务。对MaxCompute＋Dataphin的落地建议是：保留现有离线分层，将语义资产、指标口径、血缘和权限作为独立可版本化元数据；先以只读工具暴露经过审批的指标/分析SQL，禁止Agent自由拼接生产SQL；经评测的高频分析再回沉为DWS/ADS或固定工作流。",
-    "practical_mapping": {
-      "MaxCompute": ["ODS/DWD/DWS/ADS继续承担离线接入、事实统一、公共汇总和固定应用", "通过只读查询与Explain/结果校验工具承接AI Serving", "保留分区、幂等、回补和成本审计"],
-      "Dataphin": ["把数据标准、指标、模型、血缘、质量和发布审批作为语义资产来源", "区分开发、提交、发布和生产生效状态", "Agent只调用已授权资产与模板，不绕过发布流程"]
-    },
-    "source_channel": "public_web_fallback",
-    "url_gap": "用户已确认该页面属于其他公众号；公众号名称和微信原文URL尚未取得。公开页面不能证明与微信推送完全同源，保留为独立公开核验，不计入‘与数据同行’统计"
-  },
-  {
     "id": "wechat-local-ydata-analysis-known-20261018",
     "account": "与数据同行",
     "title": "分析做了二十页，全是老板知道的事",
