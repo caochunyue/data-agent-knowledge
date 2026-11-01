@@ -11,6 +11,9 @@
 
 ## 当前文档入口
 
+- [规范深读：Core、Ontology 与 Mapping](spec-deep-dive.md)
+- [桥接到数据研发 Agent 的方法](bridge-and-agent.md)
+
 - [数据研发 Agent 落地指南总入口](../practice/README.md)
 - [七层架构与工具契约](../practice/architecture.md)
 - [Ossie / OSI 语义模型说明](../practice/modeling-playbook.md#ossie-能帮到哪里)
