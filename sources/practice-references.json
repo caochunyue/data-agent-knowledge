@@ -1,0 +1,122 @@
+[
+  {
+    "id": "apache-ossie-core-pinned",
+    "title": "Apache Ossie Core Specification (pinned commit)",
+    "publisher": "Apache Software Foundation",
+    "url": "https://github.com/apache/ossie/blob/48da55a07e4e8c3a11a662b14727557f6342536d/core-spec/spec.md",
+    "accessed_date": "2026-11-01",
+    "revision": "48da55a07e4e8c3a11a662b14727557f6342536d",
+    "used_for": "dataset、field、relationship、metric 与表达式能力边界",
+    "evidence_level": "pinned_primary_source"
+  },
+  {
+    "id": "apache-ossie-ontology-pinned",
+    "title": "Apache Ossie Ontology Specification (pinned commit)",
+    "publisher": "Apache Software Foundation",
+    "url": "https://github.com/apache/ossie/blob/48da55a07e4e8c3a11a662b14727557f6342536d/ontology/ontology.md",
+    "accessed_date": "2026-11-01",
+    "revision": "48da55a07e4e8c3a11a662b14727557f6342536d",
+    "used_for": "EntityType、ValueType、关系、身份与 mapping 兼容说明",
+    "evidence_level": "pinned_primary_source"
+  },
+  {
+    "id": "apache-ossie-validator-pinned",
+    "title": "Apache Ossie Validator (pinned commit)",
+    "publisher": "Apache Software Foundation",
+    "url": "https://github.com/apache/ossie/blob/48da55a07e4e8c3a11a662b14727557f6342536d/validation/validate.py",
+    "accessed_date": "2026-11-01",
+    "revision": "48da55a07e4e8c3a11a662b14727557f6342536d",
+    "used_for": "语义、本体和跨文档 mapping 校验器的实际代码能力",
+    "evidence_level": "pinned_primary_source"
+  },
+  {
+    "id": "dataphin-lineage-api",
+    "title": "GetTableLineageByTaskId - Dataphin Public API",
+    "publisher": "Alibaba Cloud",
+    "url": "https://api.aliyun.com/document/dataphin-public/2023-06-30/GetTableLineageByTaskId",
+    "accessed_date": "2026-11-01",
+    "used_for": "Dataphin 表血缘查询与 RAM 授权的公开能力证据",
+    "evidence_level": "official_product_documentation"
+  },
+  {
+    "id": "maxcompute-explain",
+    "title": "EXPLAIN",
+    "publisher": "Alibaba Cloud",
+    "url": "https://help.aliyun.com/zh/maxcompute/explain-1",
+    "accessed_date": "2026-11-01",
+    "used_for": "MaxCompute 执行计划结构与输出限制",
+    "evidence_level": "official_product_documentation"
+  },
+  {
+    "id": "maxcompute-permissions",
+    "title": "MaxCompute 权限",
+    "publisher": "Alibaba Cloud",
+    "url": "https://help.aliyun.com/zh/maxcompute/user-guide/maxcompute-permissions",
+    "accessed_date": "2026-11-01",
+    "used_for": "项目、表、敏感数据及相关对象的权限边界",
+    "evidence_level": "official_product_documentation"
+  },
+  {
+    "id": "sqlglot-docs",
+    "title": "SQLGlot Documentation",
+    "publisher": "SQLGlot",
+    "url": "https://sqlglot.com/",
+    "accessed_date": "2026-11-01",
+    "used_for": "SQL AST、方言、宽松解析和非执行验证边界",
+    "evidence_level": "official_project_documentation"
+  },
+  {
+    "id": "datahub-mcp",
+    "title": "DataHub MCP Server",
+    "publisher": "DataHub",
+    "url": "https://docs.datahub.com/docs/features/feature-guides/mcp",
+    "accessed_date": "2026-11-01",
+    "used_for": "跨平台元数据和 Agent 工具的备选能力，不代表公司已采用",
+    "evidence_level": "official_product_documentation"
+  },
+  {
+    "id": "dbt-metricflow",
+    "title": "About MetricFlow",
+    "publisher": "dbt Labs",
+    "url": "https://docs.getdbt.com/docs/build/about-metricflow",
+    "accessed_date": "2026-11-01",
+    "used_for": "已有 dbt 体系中的语义层备选能力",
+    "evidence_level": "official_product_documentation"
+  },
+  {
+    "id": "protege-software",
+    "title": "Protégé Software",
+    "publisher": "Stanford Center for Biomedical Informatics Research",
+    "url": "https://protege.stanford.edu/software/",
+    "accessed_date": "2026-11-01",
+    "used_for": "OWL 编辑、协作和推理工具能力",
+    "evidence_level": "official_project_documentation"
+  },
+  {
+    "id": "w3c-shacl",
+    "title": "Shapes Constraint Language (SHACL)",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/shacl/",
+    "accessed_date": "2026-11-01",
+    "used_for": "RDF 数据图的 shape 约束验证",
+    "evidence_level": "standard"
+  },
+  {
+    "id": "mcp-tools-spec",
+    "title": "Model Context Protocol - Tools",
+    "publisher": "Model Context Protocol",
+    "url": "https://modelcontextprotocol.io/specification/2025-11-25/server/tools",
+    "accessed_date": "2026-11-01",
+    "used_for": "工具发现、调用和人类控制建议",
+    "evidence_level": "official_specification"
+  },
+  {
+    "id": "langfuse-self-hosting",
+    "title": "Self-host Langfuse",
+    "publisher": "Langfuse",
+    "url": "https://langfuse.com/self-hosting",
+    "accessed_date": "2026-11-01",
+    "used_for": "Agent 可观测性自托管选项及运维边界",
+    "evidence_level": "official_product_documentation"
+  }
+]

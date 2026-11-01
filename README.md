@@ -6,11 +6,13 @@
 
 ## 阅读入口
 
-1. [关注账号文章发现](docs/followed-account-findings.md)，以及[来源与覆盖范围](sources/README.md)：14 条官方/研究参考；微信原文登记为空，公开文章另表登记。
-2. [业界进展判断](docs/industry-report.md)与[推荐架构](docs/architecture.md)。
-3. [知识库与 Harness](docs/topics/knowledge-and-harness.md)、[OSI / Ossie](docs/topics/osi-semantic-model.md)、[本体实践](docs/topics/ontology-practice.md)、[评测体系](docs/topics/evaluation.md)。
-4. 分类：[数据研发](docs/categories/数据研发.md)、[资产检索答疑](docs/categories/资产检索答疑.md)、[数据分析](docs/categories/数据分析.md)、[数据 Agent](docs/categories/数据agent.md)。
-5. [案例说明](examples/README.md)、[验收报告](reports/acceptance.md)、[实施记录](docs/implementation-ledger.md)。
+1. [面向数据研发的 Agent 落地指南](docs/practice/README.md)：架构、双向建模方法、模板、工具、三个应用案例和试点清单。
+2. [MaxCompute＋Dataphin 离线研发实践包](docs/offline-rd/README.md)：中间层、应用层、链路优化、平台适配与价值评测。
+3. [关注账号文章发现](docs/followed-account-findings.md)、[全年采集规程](docs/collection/README.md)与[来源状态](sources/README.md)。
+4. [业界进展判断](docs/industry-report.md)与[推荐架构](docs/architecture.md)。
+5. [知识库与 Harness](docs/topics/knowledge-and-harness.md)、[OSI / Ossie](docs/topics/osi-semantic-model.md)、[本体实践](docs/topics/ontology-practice.md)、[评测体系](docs/topics/evaluation.md)。
+6. 分类：[数据研发](docs/categories/数据研发.md)、[资产检索答疑](docs/categories/资产检索答疑.md)、[数据分析](docs/categories/数据分析.md)、[数据 Agent](docs/categories/数据agent.md)。
+7. [案例说明](examples/README.md)、[验收报告](reports/acceptance.md)、[实施记录](docs/implementation-ledger.md)。
 
 ## 运行（基础案例只需 Python 3.9+ 标准库）
 
@@ -20,6 +22,7 @@ python3 examples/lab.py
 python3 examples/lab.py '{"tool":"search","query":"客户"}'
 python3 scripts/evaluate.py
 python3 scripts/validate_index.py
+python3 scripts/audit_coverage.py --accounts sources/collection-accounts.json --articles sources/collection-articles.json --output reports/collection-coverage.json
 ```
 
 Ossie 格式校验是可选步骤：按 examples/README.md 安装固定依赖后执行；它不影响标准库案例运行。评测输出保存在 reports，不调用云 API、不需要模型凭据。

@@ -6,6 +6,8 @@
 - [关注账号名单](followed-accounts.json)、[逐账号检索记录](account-search-log.json)、[公开文章](public-articles.json)与[待核验候选](candidates.json)。
 - [微信文章登记](wechat-articles.json)：当前为空，恢复采集后追加，不用官方资料填充这个列表。
 - [官方参考资料](references.json)：14 条，已阅读相关章节；不是逐字通读整站，也不代表用户关注的公众号。
+- [数据研发 Agent 落地指南参考](practice-references.json)：固定 Ossie 版本及 Dataphin、MaxCompute、SQLGlot、本体和工具接口的官方资料；证明公开能力，不证明公司版本已开放。
+- [全年采集账号账本](collection-accounts.json)与[文章账本](collection-articles.json)：按推送和卡片位置闭合目录；当前 36 个账号均未完成，未知总数保持为空而不是记为 0。
 
 `published_date=null` 表示页面未明确发布日期；`accessed_date` 是核验日期，不能代替发表日期。厂商文档证明公开能力，不证明在你的环境中运行过或达到生产 SLA。
 

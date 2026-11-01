@@ -1,0 +1,408 @@
+{
+  "window": {
+    "start": "2025-11-01",
+    "end": "2026-11-01"
+  },
+  "expected_accounts": 36,
+  "account_count": 36,
+  "all_complete": false,
+  "global_errors": [],
+  "accounts": [
+    {
+      "id": "acct-001",
+      "name": "与数据同行",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-002",
+      "name": "BAT大数据架构",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-003",
+      "name": "人工智能与大数据技术",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-004",
+      "name": "数据仓库与Python大数据",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-005",
+      "name": "数据打工人的自我修养",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-006",
+      "name": "数据杂货铺",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-007",
+      "name": "数据之邦",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-008",
+      "name": "数据深呼吸",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-009",
+      "name": "数据分析与开发",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-010",
+      "name": "数据科学杂谈",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-011",
+      "name": "数据的门",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-012",
+      "name": "AI数据派",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-013",
+      "name": "大数据DT",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-014",
+      "name": "大数据与AI洞察",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-015",
+      "name": "大数据24小时",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-016",
+      "name": "大数据文摘",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-017",
+      "name": "大数据与AI杂谈",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-018",
+      "name": "DT大数据梦工厂",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-019",
+      "name": "熊大数据",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-020",
+      "name": "智能数据研讨",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-021",
+      "name": "kaggle数据分析",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-022",
+      "name": "DataZoo数据科学",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-023",
+      "name": "涤生大数据",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-024",
+      "name": "大鱼的数据人生",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-025",
+      "name": "晓阳的数据小站",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-026",
+      "name": "云祁的数据江湖",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-027",
+      "name": "蓝色大象数据及人工智能产品技术",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-028",
+      "name": "小火龙说数据",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-029",
+      "name": "字节跳动数据平台",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-030",
+      "name": "过往记忆大数据",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-031",
+      "name": "机器学习与数据挖掘实践",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-032",
+      "name": "西瓜数据",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-033",
+      "name": "阿拉丁数据助手",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-034",
+      "name": "上海市数据标准化技术委员会",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-035",
+      "name": "Splunk大数据",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    },
+    {
+      "id": "acct-036",
+      "name": "腾讯云大数据",
+      "expected_articles": null,
+      "enumerated_articles": 0,
+      "full_read": 0,
+      "complete": false,
+      "errors": [
+        "inventory_not_closed"
+      ]
+    }
+  ]
+}
