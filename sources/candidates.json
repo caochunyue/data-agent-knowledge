@@ -1,0 +1,42 @@
+[
+  {
+    "account": "BAT大数据架构",
+    "title": "数据治理智能体（Agent）全景拆解：核心模块、技术实现与业务落地指南",
+    "url": "https://www.53ai.com/news/zhishiguanli/2025082891875.html",
+    "published_date": "2025-08-28",
+    "status": "read_reprint_sections",
+    "reason": "转载页署名匹配；窗口外补充候选，未核验原文，不作技术结论的主证据"
+  },
+  {
+    "account": "与数据同行",
+    "title": "基于AI大模型的数据治理",
+    "url": "https://www.53ai.com/news/LargeLanguageModel/2024073147368.html",
+    "published_date": "2024-07-31",
+    "status": "candidate",
+    "reason": "转载页署名匹配，早期治理背景候选，尚需原文核对"
+  },
+  {
+    "account": "数据仓库与Python大数据",
+    "title": "数仓链路保障体系与数据测试方法经验分享",
+    "url": "https://uml.org.cn/sjjmck/202202174.asp",
+    "published_date": null,
+    "status": "search_snippet_only",
+    "reason": "页面摘要称来自该公众号；非Agent专题，仅经典数据质量候选"
+  },
+  {
+    "account": "云祁的数据江湖",
+    "title": "数据治理凉了，因为90%的企业踩过这3大误区",
+    "url": "https://dbaplus.cn/news-73-7196-1.html",
+    "published_date": null,
+    "status": "search_snippet_only",
+    "reason": "摘要列出公众号及ID ByDreamList，待打开核验，未采信标题数字"
+  },
+  {
+    "account": "大鱼的数据人生",
+    "title": "一篇讲透主数据，建议收藏！",
+    "url": "https://www.esensoft.com/industry-news/dx-60121.html",
+    "published_date": "2026-01-23",
+    "status": "search_snippet_only",
+    "reason": "转载署名匹配，实体身份背景候选"
+  }
+]

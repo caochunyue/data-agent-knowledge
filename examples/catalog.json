@@ -1,0 +1,48 @@
+[
+  {
+    "id": "customers",
+    "title": "客户主数据",
+    "terms": [
+      "客户",
+      "customer",
+      "邮箱",
+      "email",
+      "客户主数据"
+    ],
+    "description": "客户粒度，主键 tenant_id + customer_id；邮箱不是实体身份。",
+    "source": "examples/seed.sql#customers",
+    "owner": "demo-data",
+    "classification": "synthetic"
+  },
+  {
+    "id": "orders",
+    "title": "订单事实",
+    "terms": [
+      "订单",
+      "order",
+      "支付",
+      "paid",
+      "销售额",
+      "revenue"
+    ],
+    "description": "订单粒度，金额单位分，状态 paid 才纳入已支付销售额；客户关联包含租户。",
+    "source": "examples/seed.sql#orders",
+    "owner": "demo-sales",
+    "classification": "synthetic"
+  },
+  {
+    "id": "paid_revenue",
+    "title": "已支付销售额口径",
+    "terms": [
+      "已支付销售额",
+      "营收",
+      "revenue",
+      "指标",
+      "口径"
+    ],
+    "description": "SUM(amount_cents) WHERE status=paid；币种 CNY；不含取消/待支付；未扣退款，不等于会计收入。",
+    "source": "examples/model.json#paid_revenue",
+    "owner": "demo-finance",
+    "classification": "synthetic"
+  }
+]

@@ -1,0 +1,1074 @@
+[
+  {
+    "case_id": "数据研发-01",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT tenant_id,customer_id FROM customers"
+        },
+        "output": {
+          "status": "ok",
+          "value": [
+            [
+              "a",
+              "1"
+            ],
+            [
+              "a",
+              "2"
+            ],
+            [
+              "b",
+              "1"
+            ]
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.05
+      }
+    ]
+  },
+  {
+    "case_id": "数据研发-02",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT COUNT(*) FROM orders"
+        },
+        "output": {
+          "status": "ok",
+          "value": [
+            [
+              5
+            ]
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.025
+      }
+    ]
+  },
+  {
+    "case_id": "数据研发-03",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT tenant_id,customer_id FROM customers GROUP BY tenant_id,customer_id HAVING COUNT(*)>1"
+        },
+        "output": {
+          "status": "ok",
+          "value": []
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.026
+      }
+    ]
+  },
+  {
+    "case_id": "数据研发-04",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT o.order_id FROM orders o LEFT JOIN customers c ON o.tenant_id=c.tenant_id AND o.customer_id=c.customer_id WHERE c.customer_id IS NULL"
+        },
+        "output": {
+          "status": "ok",
+          "value": []
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.031
+      }
+    ]
+  },
+  {
+    "case_id": "数据研发-05",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT order_id FROM orders WHERE amount_cents<0"
+        },
+        "output": {
+          "status": "ok",
+          "value": []
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.018
+      }
+    ]
+  },
+  {
+    "case_id": "数据研发-06",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "DELETE FROM orders"
+        },
+        "output": {
+          "status": "error",
+          "error": "not_read_only"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.008
+      }
+    ]
+  },
+  {
+    "case_id": "数据研发-07",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "CREATE TABLE bad(x)"
+        },
+        "output": {
+          "status": "error",
+          "error": "not_read_only"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.007
+      }
+    ]
+  },
+  {
+    "case_id": "数据研发-08",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "ATTACH DATABASE ':memory:' AS other"
+        },
+        "output": {
+          "status": "error",
+          "error": "not_read_only"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.007
+      }
+    ]
+  },
+  {
+    "case_id": "数据研发-09",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT 1; DELETE FROM orders"
+        },
+        "output": {
+          "status": "error",
+          "error": "sql_error"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.019
+      }
+    ]
+  },
+  {
+    "case_id": "数据研发-10",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT missing FROM orders"
+        },
+        "output": {
+          "status": "error",
+          "error": "sql_error"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.018
+      }
+    ]
+  },
+  {
+    "case_id": "资产检索答疑-01",
+    "events": [
+      {
+        "input": {
+          "tool": "search",
+          "query": "客户"
+        },
+        "output": {
+          "status": "ok",
+          "ids": [
+            "customers"
+          ],
+          "sources": [
+            "examples/seed.sql#customers"
+          ],
+          "assets": [
+            {
+              "id": "customers",
+              "title": "客户主数据",
+              "terms": [
+                "客户",
+                "customer",
+                "邮箱",
+                "email",
+                "客户主数据"
+              ],
+              "description": "客户粒度，主键 tenant_id + customer_id；邮箱不是实体身份。",
+              "source": "examples/seed.sql#customers",
+              "owner": "demo-data",
+              "classification": "synthetic"
+            }
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.037
+      }
+    ]
+  },
+  {
+    "case_id": "资产检索答疑-02",
+    "events": [
+      {
+        "input": {
+          "tool": "search",
+          "query": "订单"
+        },
+        "output": {
+          "status": "ok",
+          "ids": [
+            "orders"
+          ],
+          "sources": [
+            "examples/seed.sql#orders"
+          ],
+          "assets": [
+            {
+              "id": "orders",
+              "title": "订单事实",
+              "terms": [
+                "订单",
+                "order",
+                "支付",
+                "paid",
+                "销售额",
+                "revenue"
+              ],
+              "description": "订单粒度，金额单位分，状态 paid 才纳入已支付销售额；客户关联包含租户。",
+              "source": "examples/seed.sql#orders",
+              "owner": "demo-sales",
+              "classification": "synthetic"
+            }
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.022
+      }
+    ]
+  },
+  {
+    "case_id": "资产检索答疑-03",
+    "events": [
+      {
+        "input": {
+          "tool": "search",
+          "query": "邮箱"
+        },
+        "output": {
+          "status": "ok",
+          "ids": [
+            "customers"
+          ],
+          "sources": [
+            "examples/seed.sql#customers"
+          ],
+          "assets": [
+            {
+              "id": "customers",
+              "title": "客户主数据",
+              "terms": [
+                "客户",
+                "customer",
+                "邮箱",
+                "email",
+                "客户主数据"
+              ],
+              "description": "客户粒度，主键 tenant_id + customer_id；邮箱不是实体身份。",
+              "source": "examples/seed.sql#customers",
+              "owner": "demo-data",
+              "classification": "synthetic"
+            }
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.022
+      }
+    ]
+  },
+  {
+    "case_id": "资产检索答疑-04",
+    "events": [
+      {
+        "input": {
+          "tool": "search",
+          "query": "已支付销售额"
+        },
+        "output": {
+          "status": "ok",
+          "ids": [
+            "paid_revenue"
+          ],
+          "sources": [
+            "examples/model.json#paid_revenue"
+          ],
+          "assets": [
+            {
+              "id": "paid_revenue",
+              "title": "已支付销售额口径",
+              "terms": [
+                "已支付销售额",
+                "营收",
+                "revenue",
+                "指标",
+                "口径"
+              ],
+              "description": "SUM(amount_cents) WHERE status=paid；币种 CNY；不含取消/待支付；未扣退款，不等于会计收入。",
+              "source": "examples/model.json#paid_revenue",
+              "owner": "demo-finance",
+              "classification": "synthetic"
+            }
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.024
+      }
+    ]
+  },
+  {
+    "case_id": "资产检索答疑-05",
+    "events": [
+      {
+        "input": {
+          "tool": "search",
+          "query": "口径"
+        },
+        "output": {
+          "status": "ok",
+          "ids": [
+            "paid_revenue"
+          ],
+          "sources": [
+            "examples/model.json#paid_revenue"
+          ],
+          "assets": [
+            {
+              "id": "paid_revenue",
+              "title": "已支付销售额口径",
+              "terms": [
+                "已支付销售额",
+                "营收",
+                "revenue",
+                "指标",
+                "口径"
+              ],
+              "description": "SUM(amount_cents) WHERE status=paid；币种 CNY；不含取消/待支付；未扣退款，不等于会计收入。",
+              "source": "examples/model.json#paid_revenue",
+              "owner": "demo-finance",
+              "classification": "synthetic"
+            }
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.021
+      }
+    ]
+  },
+  {
+    "case_id": "资产检索答疑-06",
+    "events": [
+      {
+        "input": {
+          "tool": "search",
+          "query": "营收"
+        },
+        "output": {
+          "status": "ok",
+          "ids": [
+            "paid_revenue"
+          ],
+          "sources": [
+            "examples/model.json#paid_revenue"
+          ],
+          "assets": [
+            {
+              "id": "paid_revenue",
+              "title": "已支付销售额口径",
+              "terms": [
+                "已支付销售额",
+                "营收",
+                "revenue",
+                "指标",
+                "口径"
+              ],
+              "description": "SUM(amount_cents) WHERE status=paid；币种 CNY；不含取消/待支付；未扣退款，不等于会计收入。",
+              "source": "examples/model.json#paid_revenue",
+              "owner": "demo-finance",
+              "classification": "synthetic"
+            }
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.02
+      }
+    ]
+  },
+  {
+    "case_id": "资产检索答疑-07",
+    "events": [
+      {
+        "input": {
+          "tool": "search",
+          "query": "customer"
+        },
+        "output": {
+          "status": "ok",
+          "ids": [
+            "customers"
+          ],
+          "sources": [
+            "examples/seed.sql#customers"
+          ],
+          "assets": [
+            {
+              "id": "customers",
+              "title": "客户主数据",
+              "terms": [
+                "客户",
+                "customer",
+                "邮箱",
+                "email",
+                "客户主数据"
+              ],
+              "description": "客户粒度，主键 tenant_id + customer_id；邮箱不是实体身份。",
+              "source": "examples/seed.sql#customers",
+              "owner": "demo-data",
+              "classification": "synthetic"
+            }
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.021
+      }
+    ]
+  },
+  {
+    "case_id": "资产检索答疑-08",
+    "events": [
+      {
+        "input": {
+          "tool": "search",
+          "query": "paid"
+        },
+        "output": {
+          "status": "ok",
+          "ids": [
+            "orders"
+          ],
+          "sources": [
+            "examples/seed.sql#orders"
+          ],
+          "assets": [
+            {
+              "id": "orders",
+              "title": "订单事实",
+              "terms": [
+                "订单",
+                "order",
+                "支付",
+                "paid",
+                "销售额",
+                "revenue"
+              ],
+              "description": "订单粒度，金额单位分，状态 paid 才纳入已支付销售额；客户关联包含租户。",
+              "source": "examples/seed.sql#orders",
+              "owner": "demo-sales",
+              "classification": "synthetic"
+            }
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.021
+      }
+    ]
+  },
+  {
+    "case_id": "资产检索答疑-09",
+    "events": [
+      {
+        "input": {
+          "tool": "search",
+          "query": "不存在的资产"
+        },
+        "output": {
+          "status": "ok",
+          "ids": [],
+          "sources": [],
+          "assets": []
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.025
+      }
+    ]
+  },
+  {
+    "case_id": "资产检索答疑-10",
+    "events": [
+      {
+        "input": {
+          "tool": "search",
+          "query": ""
+        },
+        "output": {
+          "status": "ok",
+          "ids": [],
+          "sources": [],
+          "assets": []
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.012
+      }
+    ]
+  },
+  {
+    "case_id": "数据分析-01",
+    "events": [
+      {
+        "input": {
+          "tool": "metric",
+          "name": "paid_revenue"
+        },
+        "output": {
+          "status": "ok",
+          "value": 37000,
+          "source": "examples/model.json#paid_revenue",
+          "definition": "已支付订单金额之和，未扣退款，不是会计收入",
+          "unit": "cents"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.036
+      }
+    ]
+  },
+  {
+    "case_id": "数据分析-02",
+    "events": [
+      {
+        "input": {
+          "tool": "metric",
+          "name": "paid_order_count"
+        },
+        "output": {
+          "status": "ok",
+          "value": 3,
+          "source": "examples/model.json#paid_order_count",
+          "definition": "已支付订单数",
+          "unit": "orders"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.021
+      }
+    ]
+  },
+  {
+    "case_id": "数据分析-03",
+    "events": [
+      {
+        "input": {
+          "tool": "metric",
+          "name": "profit"
+        },
+        "output": {
+          "status": "clarify",
+          "question": "请指定已批准指标：paid_revenue 或 paid_order_count；其他口径需先确认。"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.007
+      }
+    ]
+  },
+  {
+    "case_id": "数据分析-04",
+    "events": [
+      {
+        "input": {
+          "tool": "metric",
+          "name": ""
+        },
+        "output": {
+          "status": "clarify",
+          "question": "请指定已批准指标：paid_revenue 或 paid_order_count；其他口径需先确认。"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.006
+      }
+    ]
+  },
+  {
+    "case_id": "数据分析-05",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT SUM(amount_cents) FROM orders WHERE tenant_id='a' AND status='paid'"
+        },
+        "output": {
+          "status": "ok",
+          "value": [
+            [
+              30000
+            ]
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.026
+      }
+    ]
+  },
+  {
+    "case_id": "数据分析-06",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT SUM(amount_cents) FROM orders WHERE tenant_id='b' AND status='paid'"
+        },
+        "output": {
+          "status": "ok",
+          "value": [
+            [
+              7000
+            ]
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.022
+      }
+    ]
+  },
+  {
+    "case_id": "数据分析-07",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT SUM(amount_cents) FROM orders WHERE status='cancelled'"
+        },
+        "output": {
+          "status": "ok",
+          "value": [
+            [
+              90000
+            ]
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.02
+      }
+    ]
+  },
+  {
+    "case_id": "数据分析-08",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT COALESCE(SUM(amount_cents),0) FROM orders WHERE order_date<'2020-01-01'"
+        },
+        "output": {
+          "status": "ok",
+          "value": [
+            [
+              0
+            ]
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.028
+      }
+    ]
+  },
+  {
+    "case_id": "数据分析-09",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT COUNT(*) FROM orders o JOIN customers c ON o.tenant_id=c.tenant_id AND o.customer_id=c.customer_id"
+        },
+        "output": {
+          "status": "ok",
+          "value": [
+            [
+              5
+            ]
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.03
+      }
+    ]
+  },
+  {
+    "case_id": "数据分析-10",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT COUNT(*) FROM orders o JOIN customers c ON o.customer_id=c.customer_id"
+        },
+        "output": {
+          "status": "ok",
+          "value": [
+            [
+              8
+            ]
+          ]
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.04
+      }
+    ]
+  },
+  {
+    "case_id": "数据agent-01",
+    "events": [
+      {
+        "input": {
+          "tool": "entity",
+          "tenant_id": "a",
+          "customer_id": "1"
+        },
+        "output": {
+          "status": "ok",
+          "identity": [
+            "a",
+            "1"
+          ],
+          "name": "客户甲",
+          "email": "shared@example.test",
+          "source": "examples/seed.sql#customers"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.029
+      }
+    ]
+  },
+  {
+    "case_id": "数据agent-02",
+    "events": [
+      {
+        "input": {
+          "tool": "entity",
+          "tenant_id": "b",
+          "customer_id": "1"
+        },
+        "output": {
+          "status": "ok",
+          "identity": [
+            "b",
+            "1"
+          ],
+          "name": "客户丙",
+          "email": null,
+          "source": "examples/seed.sql#customers"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.021
+      }
+    ]
+  },
+  {
+    "case_id": "数据agent-03",
+    "events": [
+      {
+        "input": {
+          "tool": "entity",
+          "customer_id": "1"
+        },
+        "output": {
+          "status": "clarify",
+          "question": "请提供 tenant_id 和完整业务标识。"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.006
+      }
+    ]
+  },
+  {
+    "case_id": "数据agent-04",
+    "events": [
+      {
+        "input": {
+          "tool": "entity",
+          "tenant_id": "a"
+        },
+        "output": {
+          "status": "clarify",
+          "question": "请提供 tenant_id 和完整业务标识。"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.006
+      }
+    ]
+  },
+  {
+    "case_id": "数据agent-05",
+    "events": [
+      {
+        "input": {
+          "tool": "entity",
+          "tenant_id": "a",
+          "customer_id": "9"
+        },
+        "output": {
+          "status": "not_found"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.016
+      }
+    ]
+  },
+  {
+    "case_id": "数据agent-06",
+    "events": [
+      {
+        "input": {
+          "tool": "relationship",
+          "tenant_id": "a",
+          "order_id": "o1"
+        },
+        "output": {
+          "status": "ok",
+          "subject": [
+            "a",
+            "o1"
+          ],
+          "predicate": "placed_by",
+          "object": [
+            "a",
+            "1"
+          ],
+          "evidence": [
+            "examples/seed.sql#customers",
+            "examples/seed.sql#orders"
+          ],
+          "mapping_version": 1
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.024
+      }
+    ]
+  },
+  {
+    "case_id": "数据agent-07",
+    "events": [
+      {
+        "input": {
+          "tool": "relationship",
+          "tenant_id": "b",
+          "order_id": "o1"
+        },
+        "output": {
+          "status": "ok",
+          "subject": [
+            "b",
+            "o1"
+          ],
+          "predicate": "placed_by",
+          "object": [
+            "b",
+            "1"
+          ],
+          "evidence": [
+            "examples/seed.sql#customers",
+            "examples/seed.sql#orders"
+          ],
+          "mapping_version": 1
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.022
+      }
+    ]
+  },
+  {
+    "case_id": "数据agent-08",
+    "events": [
+      {
+        "input": {
+          "tool": "relationship",
+          "order_id": "o1"
+        },
+        "output": {
+          "status": "clarify",
+          "question": "请提供 tenant_id 和完整业务标识。"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.006
+      }
+    ]
+  },
+  {
+    "case_id": "数据agent-09",
+    "events": [
+      {
+        "input": {
+          "tool": "shell",
+          "command": "echo bad"
+        },
+        "output": {
+          "status": "error",
+          "error": "tool_denied"
+        },
+        "budget_before": 5,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.014
+      }
+    ]
+  },
+  {
+    "case_id": "数据agent-10",
+    "events": [
+      {
+        "input": {
+          "tool": "sql",
+          "sql": "SELECT 1",
+          "_budget": 0
+        },
+        "output": {
+          "status": "error",
+          "error": "budget_exhausted"
+        },
+        "budget_before": 0,
+        "row_limit": 100,
+        "vm_steps": 100000,
+        "snapshot_sha256": "a641ff825a8a5f4e12c2ea78c820af97be5b98bd97adb873f56c7b2fee0573aa",
+        "elapsed_ms": 0.007
+      }
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "cutoff": "2026-11-01",
+  "target_start": "2025-11-01",
+  "target_end": "2026-11-01",
+  "status": "partial_public_web_fallback",
+  "followed_accounts_enumerated": 0,
+  "accounts_inspected": 0,
+  "articles_read": 0,
+  "actual_date_coverage": null,
+  "observations": [
+    "微信截图可见公众号入口",
+    "AX 树仅窗口框架",
+    "点击与 Raise 返回 AXError.notImplemented"
+  ],
+  "gaps": [
+    "微信原生历史/正文访问仍阻塞",
+    "截图只代表所提供列表，账号公开ID大多未知",
+    "公开索引未覆盖全部历史",
+    "部分跨平台归属和原文链接待核验"
+  ],
+  "next_step": "修复原生 UI 控制能力后重新枚举；或导入用户提供的公开文章链接。不得以公开搜索结果推断关注关系。",
+  "followed_accounts_from_user_screenshots": 36,
+  "public_search_accounts": 36,
+  "public_articles_read_relevant_sections": 6,
+  "public_versions_with_named_publishers": 4,
+  "public_article_dates": {
+    "earliest": "2025-11-05",
+    "latest": "2026-10-10"
+  },
+  "scope_note": "36是截图可见账号数，不保证完整关注列表；6是公开版本相关章节阅读，微信原文阅读仍为0；日期跨度不等于完整覆盖"
+}

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "snapshot": "2026-10-31",
+  "currency": "CNY",
+  "unit": "cents",
+  "metrics": {
+    "paid_revenue": {
+      "sql": "SELECT COALESCE(SUM(amount_cents),0) FROM orders WHERE status='paid'",
+      "definition": "已支付订单金额之和，未扣退款，不是会计收入",
+      "source": "examples/model.json#paid_revenue"
+    },
+    "paid_order_count": {
+      "sql": "SELECT COUNT(*) FROM orders WHERE status='paid'",
+      "definition": "已支付订单数",
+      "source": "examples/model.json#paid_order_count"
+    }
+  },
+  "identity": [
+    "tenant_id",
+    "customer_id"
+  ],
+  "mapping": {
+    "owner": "demo-data",
+    "status": "approved",
+    "version": 1,
+    "evidence": [
+      "examples/seed.sql#customers",
+      "examples/seed.sql#orders"
+    ],
+    "confidence": 1.0,
+    "relationship": "placed_by",
+    "business_assertion": "订单归属下单客户；由案例数据契约批准，外键本身不是业务证据"
+  }
+}

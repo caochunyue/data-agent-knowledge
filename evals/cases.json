@@ -1,0 +1,599 @@
+[
+  {
+    "id": "数据研发-01",
+    "group": "数据研发",
+    "name": "客户主键完整",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT tenant_id,customer_id FROM customers"
+    },
+    "expected": {
+      "status": "ok",
+      "value": [
+        [
+          "a",
+          "1"
+        ],
+        [
+          "a",
+          "2"
+        ],
+        [
+          "b",
+          "1"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "数据研发-02",
+    "group": "数据研发",
+    "name": "订单数",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT COUNT(*) FROM orders"
+    },
+    "expected": {
+      "status": "ok",
+      "value": [
+        [
+          5
+        ]
+      ]
+    }
+  },
+  {
+    "id": "数据研发-03",
+    "group": "数据研发",
+    "name": "客户重复键检查",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT tenant_id,customer_id FROM customers GROUP BY tenant_id,customer_id HAVING COUNT(*)>1"
+    },
+    "expected": {
+      "status": "ok",
+      "value": []
+    }
+  },
+  {
+    "id": "数据研发-04",
+    "group": "数据研发",
+    "name": "孤儿关系检查",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT o.order_id FROM orders o LEFT JOIN customers c ON o.tenant_id=c.tenant_id AND o.customer_id=c.customer_id WHERE c.customer_id IS NULL"
+    },
+    "expected": {
+      "status": "ok",
+      "value": []
+    }
+  },
+  {
+    "id": "数据研发-05",
+    "group": "数据研发",
+    "name": "金额约束检查",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT order_id FROM orders WHERE amount_cents<0"
+    },
+    "expected": {
+      "status": "ok",
+      "value": []
+    }
+  },
+  {
+    "id": "数据研发-06",
+    "group": "数据研发",
+    "name": "禁止修改",
+    "action": {
+      "tool": "sql",
+      "sql": "DELETE FROM orders"
+    },
+    "expected": {
+      "status": "error",
+      "error": "not_read_only"
+    }
+  },
+  {
+    "id": "数据研发-07",
+    "group": "数据研发",
+    "name": "禁止建表",
+    "action": {
+      "tool": "sql",
+      "sql": "CREATE TABLE bad(x)"
+    },
+    "expected": {
+      "status": "error",
+      "error": "not_read_only"
+    }
+  },
+  {
+    "id": "数据研发-08",
+    "group": "数据研发",
+    "name": "禁止附加库",
+    "action": {
+      "tool": "sql",
+      "sql": "ATTACH DATABASE ':memory:' AS other"
+    },
+    "expected": {
+      "status": "error",
+      "error": "not_read_only"
+    }
+  },
+  {
+    "id": "数据研发-09",
+    "group": "数据研发",
+    "name": "禁止多语句",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT 1; DELETE FROM orders"
+    },
+    "expected": {
+      "status": "error",
+      "error": "sql_error"
+    }
+  },
+  {
+    "id": "数据研发-10",
+    "group": "数据研发",
+    "name": "拒绝未知字段",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT missing FROM orders"
+    },
+    "expected": {
+      "status": "error",
+      "error": "sql_error"
+    }
+  },
+  {
+    "id": "资产检索答疑-01",
+    "group": "资产检索答疑",
+    "name": "检索 '客户'",
+    "action": {
+      "tool": "search",
+      "query": "客户"
+    },
+    "expected": {
+      "status": "ok",
+      "ids": [
+        "customers"
+      ]
+    }
+  },
+  {
+    "id": "资产检索答疑-02",
+    "group": "资产检索答疑",
+    "name": "检索 '订单'",
+    "action": {
+      "tool": "search",
+      "query": "订单"
+    },
+    "expected": {
+      "status": "ok",
+      "ids": [
+        "orders"
+      ]
+    }
+  },
+  {
+    "id": "资产检索答疑-03",
+    "group": "资产检索答疑",
+    "name": "检索 '邮箱'",
+    "action": {
+      "tool": "search",
+      "query": "邮箱"
+    },
+    "expected": {
+      "status": "ok",
+      "ids": [
+        "customers"
+      ]
+    }
+  },
+  {
+    "id": "资产检索答疑-04",
+    "group": "资产检索答疑",
+    "name": "检索 '已支付销售额'",
+    "action": {
+      "tool": "search",
+      "query": "已支付销售额"
+    },
+    "expected": {
+      "status": "ok",
+      "ids": [
+        "paid_revenue"
+      ]
+    }
+  },
+  {
+    "id": "资产检索答疑-05",
+    "group": "资产检索答疑",
+    "name": "检索 '口径'",
+    "action": {
+      "tool": "search",
+      "query": "口径"
+    },
+    "expected": {
+      "status": "ok",
+      "ids": [
+        "paid_revenue"
+      ]
+    }
+  },
+  {
+    "id": "资产检索答疑-06",
+    "group": "资产检索答疑",
+    "name": "检索 '营收'",
+    "action": {
+      "tool": "search",
+      "query": "营收"
+    },
+    "expected": {
+      "status": "ok",
+      "ids": [
+        "paid_revenue"
+      ]
+    }
+  },
+  {
+    "id": "资产检索答疑-07",
+    "group": "资产检索答疑",
+    "name": "检索 'customer'",
+    "action": {
+      "tool": "search",
+      "query": "customer"
+    },
+    "expected": {
+      "status": "ok",
+      "ids": [
+        "customers"
+      ]
+    }
+  },
+  {
+    "id": "资产检索答疑-08",
+    "group": "资产检索答疑",
+    "name": "检索 'paid'",
+    "action": {
+      "tool": "search",
+      "query": "paid"
+    },
+    "expected": {
+      "status": "ok",
+      "ids": [
+        "orders"
+      ]
+    }
+  },
+  {
+    "id": "资产检索答疑-09",
+    "group": "资产检索答疑",
+    "name": "检索 '不存在的资产'",
+    "action": {
+      "tool": "search",
+      "query": "不存在的资产"
+    },
+    "expected": {
+      "status": "ok",
+      "ids": []
+    }
+  },
+  {
+    "id": "资产检索答疑-10",
+    "group": "资产检索答疑",
+    "name": "检索 ''",
+    "action": {
+      "tool": "search",
+      "query": ""
+    },
+    "expected": {
+      "status": "ok",
+      "ids": []
+    }
+  },
+  {
+    "id": "数据分析-01",
+    "group": "数据分析",
+    "name": "全局已支付销售额",
+    "action": {
+      "tool": "metric",
+      "name": "paid_revenue"
+    },
+    "expected": {
+      "status": "ok",
+      "value": 37000,
+      "source": "examples/model.json#paid_revenue"
+    }
+  },
+  {
+    "id": "数据分析-02",
+    "group": "数据分析",
+    "name": "已支付单数",
+    "action": {
+      "tool": "metric",
+      "name": "paid_order_count"
+    },
+    "expected": {
+      "status": "ok",
+      "value": 3
+    }
+  },
+  {
+    "id": "数据分析-03",
+    "group": "数据分析",
+    "name": "未知口径澄清",
+    "action": {
+      "tool": "metric",
+      "name": "profit"
+    },
+    "expected": {
+      "status": "clarify"
+    }
+  },
+  {
+    "id": "数据分析-04",
+    "group": "数据分析",
+    "name": "未指定指标澄清",
+    "action": {
+      "tool": "metric",
+      "name": ""
+    },
+    "expected": {
+      "status": "clarify"
+    }
+  },
+  {
+    "id": "数据分析-05",
+    "group": "数据分析",
+    "name": "租户a销售额",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT SUM(amount_cents) FROM orders WHERE tenant_id='a' AND status='paid'"
+    },
+    "expected": {
+      "status": "ok",
+      "value": [
+        [
+          30000
+        ]
+      ]
+    }
+  },
+  {
+    "id": "数据分析-06",
+    "group": "数据分析",
+    "name": "租户b销售额",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT SUM(amount_cents) FROM orders WHERE tenant_id='b' AND status='paid'"
+    },
+    "expected": {
+      "status": "ok",
+      "value": [
+        [
+          7000
+        ]
+      ]
+    }
+  },
+  {
+    "id": "数据分析-07",
+    "group": "数据分析",
+    "name": "取消订单独立",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT SUM(amount_cents) FROM orders WHERE status='cancelled'"
+    },
+    "expected": {
+      "status": "ok",
+      "value": [
+        [
+          90000
+        ]
+      ]
+    }
+  },
+  {
+    "id": "数据分析-08",
+    "group": "数据分析",
+    "name": "空集合值",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT COALESCE(SUM(amount_cents),0) FROM orders WHERE order_date<'2020-01-01'"
+    },
+    "expected": {
+      "status": "ok",
+      "value": [
+        [
+          0
+        ]
+      ]
+    }
+  },
+  {
+    "id": "数据分析-09",
+    "group": "数据分析",
+    "name": "正确复合关联",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT COUNT(*) FROM orders o JOIN customers c ON o.tenant_id=c.tenant_id AND o.customer_id=c.customer_id"
+    },
+    "expected": {
+      "status": "ok",
+      "value": [
+        [
+          5
+        ]
+      ]
+    }
+  },
+  {
+    "id": "数据分析-10",
+    "group": "数据分析",
+    "name": "错误关联可观测",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT COUNT(*) FROM orders o JOIN customers c ON o.customer_id=c.customer_id"
+    },
+    "expected": {
+      "status": "ok",
+      "value": [
+        [
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "数据agent-01",
+    "group": "数据agent",
+    "name": "客户甲身份",
+    "action": {
+      "tool": "entity",
+      "tenant_id": "a",
+      "customer_id": "1"
+    },
+    "expected": {
+      "status": "ok",
+      "identity": [
+        "a",
+        "1"
+      ],
+      "name": "客户甲"
+    }
+  },
+  {
+    "id": "数据agent-02",
+    "group": "数据agent",
+    "name": "客户丙身份",
+    "action": {
+      "tool": "entity",
+      "tenant_id": "b",
+      "customer_id": "1"
+    },
+    "expected": {
+      "status": "ok",
+      "identity": [
+        "b",
+        "1"
+      ],
+      "name": "客户丙"
+    }
+  },
+  {
+    "id": "数据agent-03",
+    "group": "数据agent",
+    "name": "缺租户",
+    "action": {
+      "tool": "entity",
+      "customer_id": "1"
+    },
+    "expected": {
+      "status": "clarify"
+    }
+  },
+  {
+    "id": "数据agent-04",
+    "group": "数据agent",
+    "name": "缺客户号",
+    "action": {
+      "tool": "entity",
+      "tenant_id": "a"
+    },
+    "expected": {
+      "status": "clarify"
+    }
+  },
+  {
+    "id": "数据agent-05",
+    "group": "数据agent",
+    "name": "未知客户",
+    "action": {
+      "tool": "entity",
+      "tenant_id": "a",
+      "customer_id": "9"
+    },
+    "expected": {
+      "status": "not_found"
+    }
+  },
+  {
+    "id": "数据agent-06",
+    "group": "数据agent",
+    "name": "订单a归属",
+    "action": {
+      "tool": "relationship",
+      "tenant_id": "a",
+      "order_id": "o1"
+    },
+    "expected": {
+      "status": "ok",
+      "subject": [
+        "a",
+        "o1"
+      ],
+      "predicate": "placed_by",
+      "object": [
+        "a",
+        "1"
+      ]
+    }
+  },
+  {
+    "id": "数据agent-07",
+    "group": "数据agent",
+    "name": "订单b归属",
+    "action": {
+      "tool": "relationship",
+      "tenant_id": "b",
+      "order_id": "o1"
+    },
+    "expected": {
+      "status": "ok",
+      "object": [
+        "b",
+        "1"
+      ]
+    }
+  },
+  {
+    "id": "数据agent-08",
+    "group": "数据agent",
+    "name": "订单缺租户",
+    "action": {
+      "tool": "relationship",
+      "order_id": "o1"
+    },
+    "expected": {
+      "status": "clarify"
+    }
+  },
+  {
+    "id": "数据agent-09",
+    "group": "数据agent",
+    "name": "未知工具拒绝",
+    "action": {
+      "tool": "shell",
+      "command": "echo bad"
+    },
+    "expected": {
+      "status": "error",
+      "error": "tool_denied"
+    }
+  },
+  {
+    "id": "数据agent-10",
+    "group": "数据agent",
+    "name": "零预算拒绝",
+    "action": {
+      "tool": "sql",
+      "sql": "SELECT 1",
+      "_budget": 0
+    },
+    "expected": {
+      "status": "error",
+      "error": "budget_exhausted"
+    }
+  }
+]

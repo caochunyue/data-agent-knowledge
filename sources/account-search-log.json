@@ -1,0 +1,273 @@
+{
+  "search_round": "initial-public-web-pass",
+  "queries": [
+    {
+      "account": "与数据同行",
+      "query": "\"与数据同行\" (Agent OR 智能体 OR 语义 OR 本体)",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "candidate_requires_provenance_check"
+    },
+    {
+      "account": "BAT大数据架构",
+      "query": "\"BAT大数据架构\" (Agent OR 智能体 OR 语义 OR 本体)",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "candidate_requires_provenance_check"
+    },
+    {
+      "account": "人工智能与大数据技术",
+      "query": "\"人工智能与大数据技术\" (Agent OR 智能体 OR 语义 OR 本体)",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "数据仓库与Python大数据",
+      "query": "\"数据仓库与Python大数据\" (Agent OR 智能体 OR 语义 OR 本体)",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "candidate_requires_provenance_check"
+    },
+    {
+      "account": "数据打工人的自我修养",
+      "query": "\"数据打工人的自我修养\" (Agent OR 智能体 OR 语义 OR 本体)",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "数据杂货铺",
+      "query": "\"数据杂货铺\" (Agent OR 智能体 OR 语义 OR 本体)",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "数据之邦",
+      "query": "\"数据之邦\" (Agent OR 智能体 OR 语义 OR 本体)",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "数据深呼吸",
+      "query": "\"数据深呼吸\" (Agent OR 智能体 OR 语义 OR 本体)",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "数据分析与开发",
+      "query": "\"数据分析与开发\" (Agent OR 智能体 OR 语义 OR 本体)",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "数据科学杂谈",
+      "query": "\"数据科学杂谈\" (Agent OR 智能体 OR 语义 OR 本体)",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "数据的门",
+      "query": "\"数据的门\" (Agent OR 智能体 OR 语义 OR 本体)",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "AI数据派",
+      "query": "\"AI数据派\" (Agent OR 智能体 OR 语义 OR 本体)",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "大数据DT",
+      "query": "\"大数据DT\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "大数据与AI洞察",
+      "query": "\"大数据与AI洞察\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "大数据24小时",
+      "query": "\"大数据24小时\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "大数据文摘",
+      "query": "\"大数据文摘\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "candidate_requires_provenance_check"
+    },
+    {
+      "account": "大数据与AI杂谈",
+      "query": "\"大数据与AI杂谈\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "DT大数据梦工厂",
+      "query": "\"DT大数据梦工厂\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "熊大数据",
+      "query": "\"熊大数据\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "智能数据研讨",
+      "query": "\"智能数据研讨\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "kaggle数据分析",
+      "query": "\"kaggle数据分析\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "DataZoo数据科学",
+      "query": "\"DataZoo数据科学\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "涤生大数据",
+      "query": "\"涤生大数据\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "matched_named_publisher_read"
+    },
+    {
+      "account": "大鱼的数据人生",
+      "query": "\"大鱼的数据人生\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "matched_named_publisher_read"
+    },
+    {
+      "account": "晓阳的数据小站",
+      "query": "\"晓阳的数据小站\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "云祁的数据江湖",
+      "query": "\"云祁的数据江湖\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "candidate_requires_provenance_check"
+    },
+    {
+      "account": "蓝色大象数据及人工智能产品技术",
+      "query": "\"蓝色大象数据及人工智能产品技术\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "小火龙说数据",
+      "query": "\"小火龙说数据\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "字节跳动数据平台",
+      "query": "\"字节跳动数据平台\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "matched_named_publisher_read"
+    },
+    {
+      "account": "过往记忆大数据",
+      "query": "\"过往记忆大数据\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "机器学习与数据挖掘实践",
+      "query": "\"机器学习与数据挖掘实践\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "西瓜数据",
+      "query": "\"西瓜数据\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "阿拉丁数据助手",
+      "query": "\"阿拉丁数据助手\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "上海市数据标准化技术委员会",
+      "query": "\"上海市数据标准化技术委员会\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "Splunk大数据",
+      "query": "\"Splunk大数据\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "no_confirmed_relevant_hit_in_first_pass"
+    },
+    {
+      "account": "腾讯云大数据",
+      "query": "\"腾讯云大数据\" \"Agent\"",
+      "executed_on": "2026-11-01",
+      "mode": "public_web_search",
+      "result_status": "matched_named_publisher_read"
+    }
+  ],
+  "extra_queries": [
+    "\"字节跳动数据平台\" \"Agent\"",
+    "\"腾讯云大数据\" \"Agent\" 语义",
+    "\"大鱼的数据人生\" \"Agent\"",
+    "\"数据杂货铺\" \"Agent\"",
+    "\"大数据DT\" \"语义\" \"Agent\"",
+    "\"数据打工人的自我修养\" 智能体",
+    "\"云祁的数据江湖\" 智能体",
+    "\"数据深呼吸\" 智能体"
+  ],
+  "limitations": [
+    "未遍历公众号历史",
+    "搜索结果动态且不完整",
+    "同名近似名噪声已人工排除",
+    "检索未命中不是账号没有文章的证据"
+  ]
+}

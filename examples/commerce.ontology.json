@@ -1,0 +1,126 @@
+{
+  "version": "0.2.0.dev0",
+  "name": "CommerceOntology",
+  "ontology": [
+    {
+      "concept": "TenantId",
+      "type": "ValueType",
+      "extends": [
+        "String"
+      ]
+    },
+    {
+      "concept": "CustomerId",
+      "type": "ValueType",
+      "extends": [
+        "String"
+      ]
+    },
+    {
+      "concept": "OrderId",
+      "type": "ValueType",
+      "extends": [
+        "String"
+      ]
+    },
+    {
+      "concept": "EmailAddress",
+      "type": "ValueType",
+      "extends": [
+        "String"
+      ]
+    },
+    {
+      "concept": "Customer",
+      "type": "EntityType",
+      "identify_by": [
+        "tenant",
+        "id"
+      ],
+      "relationships": [
+        {
+          "name": "tenant",
+          "roles": [
+            {
+              "concept": "TenantId"
+            }
+          ],
+          "multiplicity": "ManyToOne",
+          "verbalizes": [
+            "{Customer} tenant {TenantId}"
+          ]
+        },
+        {
+          "name": "id",
+          "roles": [
+            {
+              "concept": "CustomerId"
+            }
+          ],
+          "multiplicity": "ManyToOne",
+          "verbalizes": [
+            "{Customer} id {CustomerId}"
+          ]
+        },
+        {
+          "name": "email",
+          "roles": [
+            {
+              "concept": "EmailAddress"
+            }
+          ],
+          "multiplicity": "ManyToOne",
+          "verbalizes": [
+            "{Customer} email {EmailAddress}"
+          ]
+        }
+      ]
+    },
+    {
+      "concept": "Order",
+      "type": "EntityType",
+      "identify_by": [
+        "tenant",
+        "id"
+      ],
+      "relationships": [
+        {
+          "name": "tenant",
+          "roles": [
+            {
+              "concept": "TenantId"
+            }
+          ],
+          "multiplicity": "ManyToOne",
+          "verbalizes": [
+            "{Order} tenant {TenantId}"
+          ]
+        },
+        {
+          "name": "id",
+          "roles": [
+            {
+              "concept": "OrderId"
+            }
+          ],
+          "multiplicity": "ManyToOne",
+          "verbalizes": [
+            "{Order} id {OrderId}"
+          ]
+        },
+        {
+          "name": "placed_by",
+          "roles": [
+            {
+              "concept": "Customer"
+            }
+          ],
+          "multiplicity": "ManyToOne",
+          "verbalizes": [
+            "{Order} placed_by {Customer}"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "commit": "48da55a07e4e8c3a11a662b14727557f6342536d",
+  "schemas": 3,
+  "errors": [],
+  "limitations": "schema shape and document names only; not a general cross-reference, expression or semantic equivalence validator"
+}

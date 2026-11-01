@@ -1,0 +1,165 @@
+{
+  "version": "0.2.0.dev0",
+  "name": "CommerceSemantic",
+  "datasets": [
+    {
+      "name": "customers",
+      "source": "customers",
+      "primary_key": [
+        "tenant_id",
+        "customer_id"
+      ],
+      "fields": [
+        {
+          "name": "tenant_id",
+          "expression": {
+            "dialects": [
+              {
+                "dialect": "ANSI_SQL",
+                "expression": "tenant_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "customer_id",
+          "expression": {
+            "dialects": [
+              {
+                "dialect": "ANSI_SQL",
+                "expression": "customer_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "name",
+          "expression": {
+            "dialects": [
+              {
+                "dialect": "ANSI_SQL",
+                "expression": "name"
+              }
+            ]
+          }
+        },
+        {
+          "name": "email",
+          "expression": {
+            "dialects": [
+              {
+                "dialect": "ANSI_SQL",
+                "expression": "email"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "source": "orders",
+      "primary_key": [
+        "tenant_id",
+        "order_id"
+      ],
+      "fields": [
+        {
+          "name": "tenant_id",
+          "expression": {
+            "dialects": [
+              {
+                "dialect": "ANSI_SQL",
+                "expression": "tenant_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "order_id",
+          "expression": {
+            "dialects": [
+              {
+                "dialect": "ANSI_SQL",
+                "expression": "order_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "customer_id",
+          "expression": {
+            "dialects": [
+              {
+                "dialect": "ANSI_SQL",
+                "expression": "customer_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "amount_cents",
+          "expression": {
+            "dialects": [
+              {
+                "dialect": "ANSI_SQL",
+                "expression": "amount_cents"
+              }
+            ]
+          }
+        },
+        {
+          "name": "status",
+          "expression": {
+            "dialects": [
+              {
+                "dialect": "ANSI_SQL",
+                "expression": "status"
+              }
+            ]
+          }
+        },
+        {
+          "name": "order_date",
+          "expression": {
+            "dialects": [
+              {
+                "dialect": "ANSI_SQL",
+                "expression": "order_date"
+              }
+            ]
+          }
+        }
+      ],
+      "metrics": [
+        {
+          "name": "paid_revenue",
+          "description": "CNY cents; paid only; before refunds",
+          "expression": {
+            "dialects": [
+              {
+                "dialect": "ANSI_SQL",
+                "expression": "SUM(CASE WHEN status = 'paid' THEN amount_cents ELSE 0 END)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "name": "orders_to_customers",
+      "from": "orders",
+      "to": "customers",
+      "from_columns": [
+        "tenant_id",
+        "customer_id"
+      ],
+      "to_columns": [
+        "tenant_id",
+        "customer_id"
+      ]
+    }
+  ]
+}

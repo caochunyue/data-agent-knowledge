@@ -1,0 +1,5 @@
+{
+  "status": "pass",
+  "errors": [],
+  "checks": "source fields, dates, categories, duplicate IDs/URLs, local Markdown targets; remote link reachability not checked"
+}

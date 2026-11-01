@@ -1,0 +1,284 @@
+[
+  {
+    "id": "ossie-core",
+    "title": "Apache Ossie Core Spec",
+    "publisher": "Apache",
+    "url": "https://github.com/apache/ossie/blob/48da55a07e4e8c3a11a662b14727557f6342536d/core-spec/spec.md",
+    "published_date": null,
+    "date_note": "页面未明确发布日期，记录为未知",
+    "accessed_date": "2026-11-01",
+    "source_type": "规范草案",
+    "primary_category": "数据分析",
+    "tags": [
+      "语义模型",
+      "OSI"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "固定版本定义 dataset、field、relationship、metric；不等于 SQL 执行引擎。",
+    "evidence_level": "public_documentation",
+    "revision": "48da55a07e4e8c3a11a662b14727557f6342536d",
+    "window": "undated_reference"
+  },
+  {
+    "id": "ossie-ontology",
+    "title": "Apache Ossie Ontology",
+    "publisher": "Apache",
+    "url": "https://github.com/apache/ossie/blob/48da55a07e4e8c3a11a662b14727557f6342536d/ontology/ontology.md",
+    "published_date": null,
+    "date_note": "页面未明确发布日期，记录为未知",
+    "accessed_date": "2026-11-01",
+    "source_type": "规范草案",
+    "primary_category": "数据agent",
+    "tags": [
+      "本体",
+      "映射"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "对象身份与业务关系分开建模；独立 mapping 已定义但工具支持存在缺口。",
+    "evidence_level": "public_documentation",
+    "revision": "48da55a07e4e8c3a11a662b14727557f6342536d",
+    "window": "undated_reference"
+  },
+  {
+    "id": "ossie-mapping",
+    "title": "Apache Ossie Mapping schema",
+    "publisher": "Apache",
+    "url": "https://github.com/apache/ossie/blob/48da55a07e4e8c3a11a662b14727557f6342536d/ontology/mapping.json",
+    "published_date": null,
+    "date_note": "页面未明确发布日期，记录为未知",
+    "accessed_date": "2026-11-01",
+    "source_type": "机器可读规范",
+    "primary_category": "数据agent",
+    "tags": [
+      "本体",
+      "映射"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "独立映射引用一个 ontology 和一个 semantic model。",
+    "evidence_level": "public_documentation",
+    "revision": "48da55a07e4e8c3a11a662b14727557f6342536d",
+    "window": "undated_reference"
+  },
+  {
+    "id": "dbt-metricflow",
+    "title": "About MetricFlow",
+    "publisher": "dbt Labs",
+    "url": "https://docs.getdbt.com/docs/build/about-metricflow",
+    "published_date": null,
+    "date_note": "页面未明确发布日期，记录为未知",
+    "accessed_date": "2026-11-01",
+    "source_type": "官方产品文档",
+    "primary_category": "数据分析",
+    "tags": [
+      "指标",
+      "语义模型"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "MetricFlow 根据语义模型生成指标查询；当前文档列出 Ossie 接入。",
+    "evidence_level": "public_documentation",
+    "revision": null,
+    "window": "undated_reference"
+  },
+  {
+    "id": "datahub-mcp",
+    "title": "DataHub MCP Server",
+    "publisher": "DataHub",
+    "url": "https://docs.datahub.com/docs/features/feature-guides/mcp",
+    "published_date": null,
+    "date_note": "页面未明确发布日期，记录为未知",
+    "accessed_date": "2026-11-01",
+    "source_type": "官方产品文档",
+    "primary_category": "资产检索答疑",
+    "tags": [
+      "元数据",
+      "MCP",
+      "血缘"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "提供元数据发现、schema、血缘和查询使用上下文；读写工具需要区分。",
+    "evidence_level": "public_documentation",
+    "revision": null,
+    "window": "undated_reference"
+  },
+  {
+    "id": "snowflake-analyst",
+    "title": "Cortex Analyst",
+    "publisher": "Snowflake",
+    "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst",
+    "published_date": null,
+    "date_note": "页面未明确发布日期，记录为未知",
+    "accessed_date": "2026-11-01",
+    "source_type": "官方产品文档",
+    "primary_category": "数据分析",
+    "tags": [
+      "Text-to-SQL",
+      "语义视图"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "结构化数据问答 API；当前文档建议迁往 Cortex Agents。",
+    "evidence_level": "public_documentation",
+    "revision": null,
+    "window": "undated_reference"
+  },
+  {
+    "id": "snowflake-evals",
+    "title": "Cortex Analyst evaluations",
+    "publisher": "Snowflake",
+    "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst-evaluations",
+    "published_date": null,
+    "date_note": "页面未明确发布日期，记录为未知",
+    "accessed_date": "2026-11-01",
+    "source_type": "官方产品文档",
+    "primary_category": "数据分析",
+    "tags": [
+      "评测",
+      "防泄漏"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "用验证查询作真值并比较执行结果；评测时从上下文移除被选中的验证查询。",
+    "evidence_level": "public_documentation",
+    "revision": null,
+    "window": "undated_reference"
+  },
+  {
+    "id": "google-data-agent",
+    "title": "Conversational Analytics API",
+    "publisher": "Google Cloud",
+    "url": "https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/overview",
+    "published_date": null,
+    "date_note": "页面未明确发布日期，记录为未知",
+    "accessed_date": "2026-11-01",
+    "source_type": "官方产品文档",
+    "primary_category": "数据agent",
+    "tags": [
+      "SQL",
+      "分析",
+      "工具"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "提供结构化数据问答 API 和工具上下文；输出仍需验证。",
+    "evidence_level": "public_documentation",
+    "revision": null,
+    "window": "undated_reference"
+  },
+  {
+    "id": "databricks-genie",
+    "title": "Test and monitor a Genie Agent",
+    "publisher": "Databricks",
+    "url": "https://docs.databricks.com/aws/en/genie-agents/monitor",
+    "published_date": "2026-09-17",
+    "date_note": "官方页面发布日期或最后更新日",
+    "accessed_date": "2026-11-01",
+    "source_type": "官方产品文档",
+    "primary_category": "数据分析",
+    "tags": [
+      "评测",
+      "反馈"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "提供 SQL 检查、用户反馈及 benchmark；反馈本身不会自动更新行为。",
+    "evidence_level": "public_documentation",
+    "revision": null,
+    "window": "in_window"
+  },
+  {
+    "id": "anthropic-context",
+    "title": "Effective context engineering for AI agents",
+    "publisher": "Anthropic",
+    "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+    "published_date": "2025-09-29",
+    "date_note": "官方页面发布日期或最后更新日",
+    "accessed_date": "2026-11-01",
+    "source_type": "厂商工程文章",
+    "primary_category": "数据agent",
+    "tags": [
+      "上下文",
+      "知识库"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "按任务选择上下文；扩大上下文不能替代相关性管理。",
+    "evidence_level": "public_documentation",
+    "revision": null,
+    "window": "classic"
+  },
+  {
+    "id": "anthropic-harness",
+    "title": "Effective harnesses for long-running agents",
+    "publisher": "Anthropic",
+    "url": "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
+    "published_date": "2025-11-26",
+    "date_note": "官方页面发布日期或最后更新日",
+    "accessed_date": "2026-11-01",
+    "source_type": "厂商工程文章",
+    "primary_category": "数据研发",
+    "tags": [
+      "Harness",
+      "跨会话"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "采用增量任务、进度文件、Git 与端到端检查保持长任务可接续。",
+    "evidence_level": "public_documentation",
+    "revision": null,
+    "window": "in_window"
+  },
+  {
+    "id": "anthropic-evals",
+    "title": "Demystifying evals for AI agents",
+    "publisher": "Anthropic",
+    "url": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+    "published_date": "2026-01-09",
+    "date_note": "官方页面发布日期或最后更新日",
+    "accessed_date": "2026-11-01",
+    "source_type": "厂商工程文章",
+    "primary_category": "数据agent",
+    "tags": [
+      "评测",
+      "轨迹"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "区分任务、trial、grader、轨迹与环境最终结果；评估模型和 harness 的组合。",
+    "evidence_level": "public_documentation",
+    "revision": null,
+    "window": "in_window"
+  },
+  {
+    "id": "shacl",
+    "title": "Shapes Constraint Language",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/shacl/",
+    "published_date": "2017-07-20",
+    "date_note": "官方页面发布日期或最后更新日",
+    "accessed_date": "2026-11-01",
+    "source_type": "W3C Recommendation",
+    "primary_category": "数据agent",
+    "tags": [
+      "本体",
+      "约束"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "用 shape 验证 RDF 数据图；不是自动发现业务含义的工具。",
+    "evidence_level": "public_documentation",
+    "revision": null,
+    "window": "classic"
+  },
+  {
+    "id": "spider2",
+    "title": "Spider 2.0",
+    "publisher": "XLANG Lab",
+    "url": "https://spider2-sql.github.io/",
+    "published_date": null,
+    "date_note": "页面未明确发布日期，记录为未知",
+    "accessed_date": "2026-11-01",
+    "source_type": "研究项目",
+    "primary_category": "数据研发",
+    "tags": [
+      "评测",
+      "Text-to-SQL"
+    ],
+    "read_status": "read_relevant_sections",
+    "summary": "企业 SQL 工作流评测含多种设置；不同设置和 oracle 条件不可混比。",
+    "evidence_level": "public_documentation",
+    "revision": null,
+    "window": "undated_reference"
+  }
+]

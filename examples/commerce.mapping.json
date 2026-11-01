@@ -1,0 +1,82 @@
+{
+  "version": "0.2.0.dev0",
+  "name": "CommerceMapping",
+  "ontology_ref": {
+    "name": "CommerceOntology",
+    "iri": "./commerce.ontology.json"
+  },
+  "semantic_model_ref": {
+    "name": "CommerceSemantic",
+    "iri": "./commerce.semantic.json"
+  },
+  "concept_mappings": [
+    {
+      "concept": "Customer",
+      "object_mappings": [
+        {
+          "referent_mappings": [
+            {
+              "relationship": "tenant",
+              "expression": "customers.tenant_id"
+            },
+            {
+              "relationship": "id",
+              "expression": "customers.customer_id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "concept": "Order",
+      "object_mappings": [
+        {
+          "referent_mappings": [
+            {
+              "relationship": "tenant",
+              "expression": "orders.tenant_id"
+            },
+            {
+              "relationship": "id",
+              "expression": "orders.order_id"
+            }
+          ]
+        }
+      ],
+      "link_mappings": [
+        {
+          "object_mapping": {
+            "referent_mappings": [
+              {
+                "relationship": "tenant",
+                "expression": "orders.tenant_id"
+              },
+              {
+                "relationship": "id",
+                "expression": "orders.order_id"
+              }
+            ]
+          },
+          "children": [
+            {
+              "relationship": "placed_by",
+              "object_mapping": {
+                "concept": "Customer",
+                "referent_mappings": [
+                  {
+                    "relationship": "tenant",
+                    "expression": "orders.tenant_id"
+                  },
+                  {
+                    "relationship": "id",
+                    "expression": "orders.customer_id"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

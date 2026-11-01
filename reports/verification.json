@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-01",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_forty_behavior_contracts (test_contract.Contract) ... ok\ntest_retrieval_cites_and_does_not_execute_instructions (test_contract.Contract) ... ok\ntest_trace_replay_and_call_budget (test_contract.Contract) ... ok\ntest_write_and_resource_boundaries (test_contract.Contract) ... ok\ntest_invalid_limits_are_rejected (test_contract.ReviewRegression) ... ok\ntest_replay_rejects_discontinuous_budget (test_contract.ReviewRegression) ... ok\ntest_snapshot_is_frozen_at_load (test_contract.ReviewRegression) ... ok\ntest_duplicate_and_missing_fields (test_validation.IndexContract) ... ok\ntest_good_record_and_bad_classification (test_validation.IndexContract) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.055s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/evaluate.py"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"suite\": \"deterministic-development-regression\",\n  \"python\": \"3.9.6\",\n  \"total\": 40,\n  \"passed\": 40,\n  \"groups\": {\n    \"数据研发\": 10,\n    \"资产检索答疑\": 10,\n    \"数据分析\": 10,\n    \"数据agent\": 10\n  },\n  \"model_evaluated\": false,\n  \"replay_verified\": true\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/validate_index.py"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"status\": \"pass\",\n  \"errors\": [],\n  \"checks\": \"source fields, dates, categories, duplicate IDs/URLs, local Markdown targets; remote link reachability not checked\"\n}\n"
+    },
+    {
+      "command": [
+        "/Users/lijianbo/Documents/Codex/data_agent/data-agent-knowledge/.venv/bin/python",
+        "scripts/validate_ossie.py"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"status\": \"pass\",\n  \"commit\": \"48da55a07e4e8c3a11a662b14727557f6342536d\",\n  \"schemas\": 3,\n  \"errors\": [],\n  \"limitations\": \"schema shape and document names only; not a general cross-reference, expression or semantic equivalence validator\"\n}\n"
+    }
+  ]
+}

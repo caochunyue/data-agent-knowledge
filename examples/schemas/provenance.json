@@ -1,0 +1,11 @@
+{
+  "upstream": "https://github.com/apache/ossie",
+  "commit": "48da55a07e4e8c3a11a662b14727557f6342536d",
+  "files": {
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "ontology.json": "228b589ad950c557199f9049eb087b0c9cf8e6acbd6dab70e1b408dd1061fde2",
+    "NOTICE": "cdd61e3d225833b912985567730c9043394ae21e3ecfe619ed63cff5f170c59a",
+    "mapping.json": "8db74be12cda94e23240cc502bb2ac0580b69a05431fda35ee0c9e8b7e6f096b",
+    "core.json": "2cf11e3c555b767b2612a4e479545e55485d81af62c3bf465a03f33a861aae4c"
+  }
+}
