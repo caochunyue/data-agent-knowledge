@@ -46,5 +46,37 @@
     "status": "discovered_image_article_not_read",
     "evidence": "公众号贴图页原生截图可见标题与业务架构图；未打开正文",
     "relevance": "业务架构、领域划分、架构自检"
+  },
+  {
+    "account": "与数据同行",
+    "title": "一图讲清4A架构",
+    "published_date": null,
+    "status": "discovered_image_article_not_read",
+    "evidence": "公众号贴图页原生截图可见标题和四层架构图；未打开正文",
+    "relevance": "业务架构、数据架构、应用架构、技术架构"
+  },
+  {
+    "account": "与数据同行",
+    "title": "漫画：别让数据团队活成‘明早交付’的外包",
+    "published_date": null,
+    "status": "discovered_image_article_not_read",
+    "evidence": "公众号贴图页原生截图可见标题和漫画；未打开正文",
+    "relevance": "数据研发协作、需求管理、交付流程"
+  },
+  {
+    "account": "与数据同行",
+    "title": "数据质量没问题，为什么AI还是总答错",
+    "published_date": null,
+    "status": "discovered_image_article_not_read",
+    "evidence": "公众号贴图页原生截图可见标题和数据质量分层图；未打开正文",
+    "relevance": "数据质量、AI问答、可引用可追溯、语义层"
+  },
+  {
+    "account": "与数据同行",
+    "title": "数据标准之死：不反对、不支持、不执行",
+    "published_date": null,
+    "status": "discovered_image_article_not_read",
+    "evidence": "公众号贴图页原生截图可见标题和标准会议漫画；未打开正文",
+    "relevance": "数据标准、治理落地、组织协同"
   }
 ]
