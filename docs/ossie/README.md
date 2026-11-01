@@ -13,6 +13,7 @@
 
 - [规范深读：Core、Ontology 与 Mapping](spec-deep-dive.md)
 - [桥接到数据研发 Agent 的方法](bridge-and-agent.md)
+- [从资产语义模型构建业务本体：落地手册](ontology-bridge-playbook.md)
 
 - [数据研发 Agent 落地指南总入口](../practice/README.md)
 - [七层架构与工具契约](../practice/architecture.md)
